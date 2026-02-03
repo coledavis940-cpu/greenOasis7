@@ -1,28 +1,36 @@
+
 # Copilot Instructions for greenOasis7
 
 ## Project Overview
-This repository currently contains only a `README.md` and `LICENSE` file. No source code, configuration, or manifest files are present in the root directory. The project structure and purpose are not yet defined.
+This repository is in an early stage. The only present files are:
+- `README.md` (references a Node.js structure with `index.js` and `package.json`, but these files do not exist yet)
+- `LICENSE`
+- `.vscode/settings.json` (Python test config, see below)
+- `.vscode/launch.json` (Chrome debug configs)
 
 ## Guidance for AI Coding Agents
-- **Project Initialization:** If you are tasked with bootstrapping this project, clarify the intended language, framework, and application domain with the user before proceeding.
-- **File Discovery:** No `index.js`, `package.json`, or other code files are present in the root directory, but `README.md` references these files as aspirational or planned. Confirm their existence before assuming project structure.
-- **Conventions:** No project-specific conventions, build workflows, or integration patterns are currently discoverable. Do not assume any framework or language until confirmed by the user or new files are added.
-- **Next Steps:** Recommend confirming project requirements and intended architecture with the user before generating code or structure.
+- **Clarify Project Intent:** Always confirm the intended language, framework, and application domain with the user before generating code or structure. Do not assume Node.js or Python unless explicitly confirmed.
+- **File Discovery:** The `README.md` suggests a Node.js structure, but no source or manifest files exist. If creating them, follow standard conventions for the chosen stack.
+- **VS Code Workflows:**
+	- `.vscode/settings.json` configures Python `unittest` discovery (pattern: `*test.py`). Pytest is disabled. If Python code is added, use `unittest` for tests by default.
+	- `.vscode/launch.json` provides Chrome debug/attach configs for web development at `http://localhost:8080`. If implementing a web server, ensure it runs on this port for out-of-the-box debugging.
+- **No Build/Test Scripts:** No `package.json`, Makefile, or other build/test scripts are present. If adding them, document any nonstandard commands or workflows here.
+- **No External Integrations:** No dependencies, APIs, or integration points are discoverable. Document any new ones as they are introduced.
 
 ## Example Questions to Ask the User
 - What is the primary goal or application for this repository?
-- Which language or framework should be used?
+- Which language or framework should be used (Node.js, Python, etc.)?
+- Should the project follow the structure suggested in `README.md`?
 - Are there any existing design documents or requirements?
-- Should the project follow the structure suggested in `README.md` (e.g., Node.js with `index.js` and `package.json`)?
 
 ## Discoverable Patterns & Key Files
-- The `README.md` references a Node.js style structure (`index.js`, `package.json`), but these files are not present. If you create them, follow standard Node.js conventions unless directed otherwise.
-- No build, test, or deployment workflows are defined. If implementing, clarify with the user before introducing tools or scripts.
-- No external dependencies or integration points are discoverable at this stage.
+- `README.md`: Aspirational Node.js structure, not yet implemented.
+- `.vscode/settings.json`: Python `unittest` config (if Python is used).
+- `.vscode/launch.json`: Chrome debug configs for web apps on port 8080.
 
 ## Updating Instructions
-- As the project evolves, update this file to document new patterns, workflows, and conventions.
+- Update this file as the project evolves: document new patterns, workflows, and conventions as they are established.
 - Reference key files and directories as they are added, and describe any project-specific approaches that differ from common practices.
 
 ---
-_This file should be updated as the project evolves and new patterns, workflows, or conventions are established._
+_Update this file as the project evolves and new patterns, workflows, or conventions are established._
